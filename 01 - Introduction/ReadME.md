@@ -124,15 +124,20 @@ $ for var in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN AWS_SECUR
       **Install aws cli**
       sudo yum update -y
       sudo yum install curl unzip wget -y  
+      
+      ##download the amazon CLI
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      ##unzip the awscli folder
       unzip awscliv2.zip
+      ##install the folder
       sudo ./aws/install
 
       **Install Terraform**
-      a) *Download binary*
+      a) *Download binary*  
       sudo yum update -y
       sudo yum install wget unzip -y
-      sudo wget https://releases.hashicorp.com/terraform/1.4.4/terraform_1.1.4_linux_amd64.zip
+      ## this portion of the script gave me error check for the latest version
+      sudo wget https://releases.hashicorp.com/terraform/1.4.4/terraform_1.4.6_linux_amd64.zip 
       sudo unzip terraform_1.1.4_linux_amd64.zip -d /usr/local/bin
       terraform -v
 
